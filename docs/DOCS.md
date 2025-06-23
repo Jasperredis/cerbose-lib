@@ -11,6 +11,7 @@ Yes, I put the table of contents before the introduction. So what? I think it lo
     - [PyPI Install](#pypi-install)
     - [Manual Install](#manual-install)
 - [Post-Installation](#post-installation)
+- [Functions](#functions) -- Skip to here if you already have Cerbose installed.
 
 ## Installation
 **You can skip reading this if you already know how to install a Python library.**
@@ -84,8 +85,59 @@ No, don't skip this, this is unique to Cerbose.
 Upon installing Cerbose, your directory should look like this:
 ```plaintext
 cerbose-lib
-├── src/
-│   └── cerbose.py
+├── .readme/
+│   ├── jrisbanner.png
+│   ├── logo.png
+│   └── test.png
+├── docs/
+│   └── DOCS.md
 ├── examples/
 │   ├── config.json
 │   └── test.py
+├── src/
+│   └── cerbose.py
+├── LICENSE
+├── LICENSE-GPL
+├── LICENSE-LGPL
+├── LICENSE-MIT
+├── pyproject.toml
+├── README.md
+```
+If it doesn't...well, that's not *good*.  
+If you don't have the directory (you probably installed via PyPI), that's okay, either run this in your terminal:
+```bash
+git clone https://github.com/jasperredis/cerbose-lib
+```
+and `cd` into the directory, or simply go to ![the repository on GitHub](https://github.com/jasperredis/cerbose-lib) and download really the only thing you need: `examples/test.py`.
+
+Assuming it does, you can probably delete `.readme/` now, you don't need it unless you're actively checking the README (which is on the GitHub repository anyways).  
+Now, to make sure Cerbose is working, try running the test script via the terminal command here (ENSURE YOU ARE INSIDE OF THE `cerbose-lib/` DIRECTORY!:
+```bash
+python examples/test.py
+```
+And if on Windows that doesn't work, try this in PowerShell:
+```powershell
+py examples/test.py
+```
+If that works, you can continue!
+
+## Functions
+Finally, we move on to the most important part of this documentation; how to actually use Cerbose.  
+First, like any other Python library, ensure that Cerbose is actually imported, with:
+```python
+import cerbose
+```
+at the top of your file.  
+I also reccomend adding:
+```python
+from cerbose import cprint, mprint
+```
+and even adding `cerbar` or `cin` to it if you really need those functions a lot. Though, `cprint`/`mprint` are the functions you absolutely do not want to have to type `cerbose.` for.
+
+### cprint
+`cprint`, the highlight function of Cerbose, allows you to output highly configurable tagged text to the console. Here is a deep overview of how to use it!
+
+`cprint` is defined in Cerbose as:
+```python
+cprint(type, text, *, log=False, logfile="", logfeedback=False, textcol="normal", stagtype=None, timestamp=False, valonly=False):
+```
