@@ -134,6 +134,29 @@ from cerbose import cprint, mprint
 ```
 and even adding `cerbar` or `cin` to it if you really need those functions a lot. Though, `cprint`/`mprint` are the functions you absolutely do not want to have to type `cerbose.` for.
 
+### INTERNAL_SUBSITUTE
+Before we get into functions, there is a universal variable across them; internally, this shouldn't need to be used. This is a list containing the names you input for functions requesting a colour to replace the `colorama` colours. Here is a table showing what all of these colours are:
+
+| Subsitute Text | `colorama` Colour | Description |
+| --- | --- | --- |
+| `"black"` | `Fore.BLACK` | Difficult to see. |
+| `"red"` | `Fore.RED` | -- |
+| `"green"` | `Fore.GREEN` | -- |
+| `"yellow"` | `Fore.YELLOW` | -- |
+| `"blue"` | `Fore.BLUE` | -- |
+| `"magenta"` | `Fore.MAGENTA` | -- |
+| `"cyan"` | `Fore.CYAN` | -- |
+| `"white"` | `Fore.WHITE` | -- |
+| `"lightblack"` | `Fore.LIGHTBLACK_EX` | -- |
+| `"lightred"` | `Fore.LIGHTRED_EX` | -- |
+| `"lightgreen"` | `Fore.LIGHTGREEN_EX` | -- |
+| `"lightyellow"` | `Fore.LIGHTYELLOW_EX` | -- |
+| `"lightblue"` | `Fore.LIGHTBLUE_EX` | -- |
+| `"lightmagenta"` | `Fore.LIGHTMAGENTA_EX` | -- |
+| `"lightcyan"` | `Fore.LIGHTCYAN_EX` | -- |
+| `"lightwhite"` | `Fore.LIGHTWHITE_EX` | -- |
+| `"normal"` | `Fore.RESET` | Normal terminal text colour; default for normal text. |
+
 ### cprint
 `cprint`, the highlight function of Cerbose, allows you to output highly configurable tagged text to the console. Here is a deep overview of how to use it!
 
@@ -141,3 +164,31 @@ and even adding `cerbar` or `cin` to it if you really need those functions a lot
 ```python
 cprint(type, text, *, log=False, logfile="", logfeedback=False, textcol="normal", stagtype=None, timestamp=False, valonly=False):
 ```
+This means that type and text are the first two required arguments, and the rest are optional keyword arugments.
+
+`type` defines the "tag" the output uses.  
+Here is an output of text from Cerbose (examples/test.py)
+```plaintext
+[OK]  : I like frogs.
+[NOTE]: I like frogs.
+[WARN]: I like frogs.
+[ERROR]: I like frogs.
+[DEBUG]: I like frogs.
+```
+Despite not being able to see the colours, you can see the parts in brackets. Those are tags.  
+There are 14 of them. The string you input for `type` will not be customized, it will be one of the availible 14 (otherwise it will default to `NONE`), however these tags can be configured with whatever colour and text you want. Here is a list of every type you can input:
+- `none`
+- `ok`
+- `note`
+- `warn`
+- `error`
+- `debug`
+- `info`
+- `input`
+- `load`
+- `pause`
+- `stat`
+- `fatal`
+- `trace`
+- `proc`
+Here is a table showing the default configurations of 
