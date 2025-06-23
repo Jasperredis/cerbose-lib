@@ -24,7 +24,7 @@ which python3
 ```
 
 ### PyPI Install
-Cerbose is a hosted package ![here on PyPI](https://pypi.org/project/cerbose). To install it, simply run this command in your terminal:  
+Cerbose is a hosted package [here on PyPI](https://pypi.org/project/cerbose). To install it, simply run this command in your terminal:  
 ```bash
 pip install cerbose
 ```
@@ -108,7 +108,7 @@ If you don't have the directory (you probably installed via PyPI), that's okay, 
 ```bash
 git clone https://github.com/jasperredis/cerbose-lib
 ```
-and `cd` into the directory, or simply go to ![the repository on GitHub](https://github.com/jasperredis/cerbose-lib) and download really the only thing you need: `examples/test.py`.
+and `cd` into the directory, or simply go to [the repository on GitHub](https://github.com/jasperredis/cerbose-lib) and download really the only thing you need: `examples/test.py`.
 
 Assuming it does, you can probably delete `.readme/` now, you don't need it unless you're actively checking the README (which is on the GitHub repository anyways).  
 Now, to make sure Cerbose is working, try running the test script via the terminal command here (ENSURE YOU ARE INSIDE OF THE `cerbose-lib/` DIRECTORY!:
