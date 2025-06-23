@@ -1,8 +1,11 @@
 ![Cerbose Logo](github/logo.png)
 <p align="center">
   <img alt="Language: Python" src="https://img.shields.io/badge/Language-Python-purple?style=flat-square">
-  <img alt="Version: Beta 1.0" src="https://img.shields.io/badge/Version-Beta_1.0-green?style=flat-square">
-  <img alt="Static Badge" src="https://img.shields.io/badge/Development_Stage-Early_Beta-orange?style=flat-square"><br>
+  <img alt="Version: 1.0.0" src="https://img.shields.io/badge/Version-Beta_1.0-green?style=flat-square">
+  <img alt="Devlopment Stage: Early Beta" src="https://img.shields.io/badge/Development_Stage-Early_Beta-orange?style=flat-square">
+  <img alt="License: LGPLv3" src="https://img.shields.io/badge/License-LGPLv3-blue?style=flat-square">
+  <img src=" https://img.shields.io/badge/FOSS-100%25-lightgrey?style=flat-square">
+  <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square"><br>
   Cerbose is a simple, cross-platform Python library, mainly for making tagged, colourful console output along with additional features.<br>
   <a href="https://jasperredis.github.io/cerbose">Website</a> |
   <a href="https://pypi.org/project/cerbose">PyPI</a> |
