@@ -1,4 +1,6 @@
 # Cerbose Documentation
+This file comes with every installation of Cerbose. If you already knew that...I can tell.
+
 ## Introduction
 **Skip reading this introduction if you want to. You won't miss any info.**  
 Cerbose is a very simple Python library, so this documentation on it shouldn't be hard to understand. This document serves the purpose of going more in-depth than any other creator-made Cerbose information source (website, README), obviously excluding the source code itself. The goal of this is to allow you, the programmer, to effectively use Cerbose in your projects and understand how to use its various functions.  
@@ -6,11 +8,20 @@ Cerbose is a very simple Python library, so this documentation on it shouldn't b
 ## Table of Contents
 Yes, I put the table of contents before the introduction. So what? I think it looks cool.
 - [Installation](#installation) -- Can be skipped, assuming you know how to install a Python package.
-    + [Manual Install](#manual-install)
+    - [PyPI Install](#pypi-install)
+    - [Manual Install](#manual-install)
+- [Post-Installation](#post-installation)
 
 ## Installation
 **You can skip reading this if you already know how to install a Python library.**
 Similarly to any other Python library, there are two ways to install cerbose.
+
+NOTE FOR LINUX: Some distributions will have `python3` in the command line instead of `python` as listed in docs. Use this to check:
+```bash
+which python
+which python3
+```
+
 ### PyPI Install
 Cerbose is a hosted package ![here on PyPI](https://pypi.org/project/cerbose). To install it, simply run this command in your terminal:  
 ```bash
@@ -45,7 +56,7 @@ deactivate                                                         # run this wh
 
 If PIP is not properly configured:
 - On Linux, ensure packages along the lines of `python-pip` and `python` are installed. (These are NOT the same per distro. Remember to check your distribution's repositories.)
-- On Windows, ensure your Enviornment Variables and PATH are properly configured. Find elsewhere online for help on this.
+- On Windows, ensure your Environment Variables and PATH are properly configured. Find elsewhere online for help on this.
 
 The following code snippet shows the most important other operations for Cerbose (and any other Python library):
 ```bash
@@ -53,6 +64,28 @@ pip install --upgrade cerbose  # Update Cerbose
 pip uninstall cerbose          # Remove Cerbose (what did i do wrong ): )
 ```
 
-
 ### Manual Install
-weiners
+> NOTE: This is NOT recommended. The PyPI install is much easier and this currently only has Linux instructions (not like that's a bad thing).
+
+To install Cerbose manually, you first need the library files. Clone it with git using this command:
+```bash
+git clone https://github.com/jasperredis/cerbose-lib
+cd cerbose-lib
+```
+Now use any of these commands to install the library (make sure to read the comments to know what you're doing!):
+```bash
+python -m pip install .     # Regular install, recommended
+python -m pip install -e .  # Editable install, so it creates a symlink from the cloned repository to your site packages.
+sudo cp src/cerbose.py /usr/lib/python3.x/site-packages/cerbose.py    # Not recommended; manually copying the script to site packages. Skips dependency, version, and update checking. Ensure python3.x is your actual Python version number.
+```
+
+## Post Installation
+No, don't skip this, this is unique to Cerbose.
+Upon installing Cerbose, your directory should look like this:
+```plaintext
+cerbose-lib
+├── src/
+│   └── cerbose.py
+├── examples/
+│   ├── config.json
+│   └── test.py
