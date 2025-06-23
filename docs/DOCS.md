@@ -191,4 +191,21 @@ There are 14 of them. The string you input for `type` will not be customized, it
 - `fatal`
 - `trace`
 - `proc`
-Here is a table showing the default configurations of 
+
+Here is a table showing the default configurations of the tags in cprint:
+| Input | Text | Colour |
+| --- | --- | --- |
+| `'none'` | `NONE` | `'white'` |
+| `'ok'` | `OK` | `'green'` |
+| `'note'` | `NOTE` | `'cyan'` |
+| `'warn'` | `WARN` | `'yellow'` |
+| `'error'` | `ERROR` | `'red'` |
+| `'debug'` | `DEBUG` | `'magenta'` |
+| `'info'` | `INFO` | `'cyan'` |
+| `'input'` | `INPUT` | `'lightblue'` |
+| `'load'` | `LOAD` | `'red'` |
+| `'pause'` | `PAUSE` | `'yellow'` |
+| `'stat'` | `STAT` | `'magenta'` |
+| `'fatal'` | `FATAL` | `'red'` |
+| `'trace'` | `TRACE` | `'magenta'` |
+| `'proc'` | `PROC` | `'magenta'` |
