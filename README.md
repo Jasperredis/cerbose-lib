@@ -1,4 +1,4 @@
-![Cerbose Logo](github/logo.png)
+![Cerbose Logo](.readme/logo.png)
 <p align="center">
   <img alt="Language: Python" src="https://img.shields.io/badge/Language-Python-purple?style=flat-square">
   <img alt="Version: 1.0.0" src="https://img.shields.io/badge/Version-Beta_1.0-green?style=flat-square">
@@ -15,7 +15,7 @@
 </p>
 
 ---
-![Test Preview Image](github/test.png)
+![Test Preview Image](.readme/test.png)
 > This wasn't done in a codeblock because they can't display colours.
 
 # Functions
@@ -77,5 +77,5 @@ Always, for more information related to licenses in Cerbose, check the [LICENSE]
 
 <h2 align="center">
   Primarily made by:<br><br>
-  <img alt="jasperredis" src="github/jrisbanner.png">
+  <img alt="jasperredis" src=".readme/jrisbanner.png">
 </h2>
