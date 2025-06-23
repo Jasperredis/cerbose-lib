@@ -54,3 +54,26 @@ More info in [the documentation](docs/DOCS.md).
 
 # Configuration
 Cerbose can be more highly configured via config files. As always, [the documentation](docs/DOCS.md) has the best information on this, but here is roughly what you can configure with these:
+- Tag colours
+- Tag text
+- Symbols (brackets, cerbar contents, etc.)
+- Timestamp format
+- Space repeat tolerance (check [documentation](docs/DOCS.md))
+
+Cerbose config files are in JSON format.
+
+# Licensing
+Always, for more information related to licenses in Cerbose, check the [LICENSE](LICENSE) file in the project root and the files it refers to.
+
+- Cerbose, the Python script itself, is licensed under the GNU Lesser General Public License v3.0 or later. What constitutes as the script itself is any file in the src/ directory of this repository.
+  + See the [LICENSE-LGPL](LICENSE-LGPL) file for more info.
+  + The LGPLv3 is an extension of the GNU General Public License v3. See the [LICENSE-GPL](LICENSE-GPL) file for more info.
+- All other files, with reasonable exception of license-related files (e.g., docs, examples) are under the MIT License.
+  + See the [LICENSE-MIT](LICENSE-MIT) file for more info.
+
+**REMINDER**: The best source of information in Cerbose (and most other projects you will encounter) is the [LICENSE](LICENSE) file at the project root.
+
+<h2 align="center">
+  Primarily made by:<br>
+  <img alt="jasperredis" src="github/jrisbanner.png">
+</h2>
