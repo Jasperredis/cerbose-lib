@@ -74,6 +74,6 @@ Always, for more information related to licenses in Cerbose, check the [LICENSE]
 **REMINDER**: The best source of information in Cerbose (and most other projects you will encounter) is the [LICENSE](LICENSE) file at the project root.
 
 <h2 align="center">
-  Primarily made by:<br>
+  Primarily made by:<br><br>
   <img alt="jasperredis" src="github/jrisbanner.png">
 </h2>
