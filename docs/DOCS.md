@@ -164,7 +164,7 @@ Before we get into functions, there is a universal variable across them; interna
 
 `cprint` is defined in Cerbose as:
 ```python
-cprint(type, text, *, log=False, logfile="", logfeedback=False, textcol="normal", stagtype=None, timestamp=False, valonly=False):
+cprint(type, text, *, logfile=None, logfeedback=False, textcol="normal", stagtype=None, timestamp=False, valonly=False):
 ```
 This means that type and text are the first two required arguments, and the rest are optional keyword arugments.
 
@@ -197,3 +197,8 @@ Here is a table showing the default configurations of the tags in cprint:
 | `'fatal'` | `FATAL` | `'red'` |
 | `'trace'` | `TRACE` | `'magenta'` |
 | `'proc'` | `PROC` | `'magenta'` |
+
+#### Logging
+Logging in `cprint` is simple.  
+Set the `logfile` argument to whatever file you want (e.g., `logfile="log.txt"`), and upon running the `cprint` function, that log file will be created if it doesn't already exist, and written to (assuming no errors occur).  
+You can also 
