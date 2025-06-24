@@ -11,7 +11,8 @@ Yes, I put the table of contents before the introduction. So what? I think it lo
     - [PyPI Install](#pypi-install)
     - [Manual Install](#manual-install)
 - [Post-Installation](#post-installation)
-- [Functions](#functions) -- Skip to here if you already have Cerbose installed.
+- [Functions](#functions) -- Skip to here if you already have Cerbose installed
+    - [INTERNAL_SUBSITUTE](#internal_subsitute)
 
 ## Installation
 **You can skip reading this if you already know how to install a Python library.**
@@ -176,21 +177,7 @@ Here is an output of text from Cerbose (examples/test.py)
 [DEBUG]: I like frogs.
 ```
 Despite not being able to see the colours, you can see the parts in brackets. Those are tags.  
-There are 14 of them. The string you input for `type` will not be customized, it will be one of the availible 14 (otherwise it will default to `NONE`), however these tags can be configured with whatever colour and text you want. Here is a list of every type you can input:
-- `none`
-- `ok`
-- `note`
-- `warn`
-- `error`
-- `debug`
-- `info`
-- `input`
-- `load`
-- `pause`
-- `stat`
-- `fatal`
-- `trace`
-- `proc`
+Assuming you are using the default configuration, there are 14 of them. That number varies by your configuration, but you will always have at least 1 (if you don't want errors, that is).
 
 Here is a table showing the default configurations of the tags in cprint:
 | Input | Text | Colour |
