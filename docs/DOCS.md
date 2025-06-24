@@ -13,6 +13,7 @@ Yes, I put the table of contents before the introduction. So what? I think it lo
 - [Post-Installation](#post-installation)
 - [Functions](#functions) -- Skip to here if you already have Cerbose installed
     - [INTERNAL_SUBSITUTE](#internal_subsitute)
+    - [cprint](#cprint)
 
 ## Installation
 **You can skip reading this if you already know how to install a Python library.**
