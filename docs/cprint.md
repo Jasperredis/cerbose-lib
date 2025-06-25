@@ -106,6 +106,7 @@ To better understand this, here is an example (in raw codeblock, its fine):
 [OK]          : ...
 [OK]          : ...
 [WARN]: The padding (official name of gap) has now reset to the next shortest tag's length!
+[OK]  : Continuing tags will use this length until it gets to reset again.
 ```
 
 See Space Repeat Tolerance configuration in 5-9.md.
