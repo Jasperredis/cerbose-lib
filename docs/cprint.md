@@ -55,4 +55,4 @@ You can also enable `logfeedback` (`logfeedback=True`) to have this output upon 
 ![`[INFO]: Logged last message.`](images/b.png)
 > This output is unchanged regardless of configuration.
 
-##
+## Text Colour
