@@ -46,6 +46,8 @@ cprint("ok", "I like frogs."
 Assuming default configurations, the output would look like this:  
 ![`[OK]: I like frogs.`](images/c.png)
 
+See custom tag configuration in 5-10.md.
+
 ## Logging
 Logging in `cprint` is simple.  
 Set the `logfile` argument to whatever file you want (e.g., `logfile="log.txt"`), and upon running the `cprint` function, that log file will be created if it doesn't already exist, and the message of the cprint call will be written to it. (assuming no errors occur).  
@@ -56,3 +58,14 @@ You can also enable `logfeedback` (`logfeedback=True`) to have this output upon 
 > This output is unchanged regardless of configuration.
 
 ## Text Colour
+To set a text colour in a `cprint` call, add the `textcol` argument, which should contain a string corresponding to an `INTERNAL_SUBSITUTE` colour (e.g., `textcol="red"`).
+
+## Stagtypes
+Stagtypes are secondary tags that precede the primary tag in `cprint`.  
+**Example:**  
+Call:  
+```python
+cprint("ok", "Hello, world!", stagtype="warn")
+```
+Assuming default configurations, this would be the output:  
+![`[WARN][OK]: Hello, world!](images/d.png)
