@@ -6,7 +6,7 @@
 cprint(type, text, *, logfile=None, logfeedback=False, textcol="normal", stagtype=None, timestamp=False, valonly=False):
 ```
 
-This means that type and text are the first two required arguments, and the rest are optional keyword arugments.
+This means that type and text are the first two required arguments, and the rest are optional keyword arguments.
 `type` defines the "tag" the output uses.  
 
 Here is an output of text from Cerbose (examples/test.py)  
@@ -46,7 +46,7 @@ cprint("ok", "I like frogs."
 Assuming default configurations, the output would look like this:  
 ![`[OK]: I like frogs.`](images/c.png)
 
-> See custom tag configuration in 5-10.md.
+> See custom tag configuration in 5-9.md.
 
 ## Logging
 Set the `logfile` argument to whatever file you want (e.g., `logfile="log.txt"`), and upon running the `cprint` function, that log file will be created if it doesn't already exist, and the message of the cprint call will be written to it. (assuming no errors occur).  
@@ -72,11 +72,11 @@ Assuming default configurations, this would be the output:
 ![`[WARN][OK]: Hello, world!](images/d.png)
 
 > This uses the same configuration as the primary tag.  
-See custom tag configuration in 5-10.md.
+See custom tag configuration in 5-9.md.
 
 ## Timestamps
 A timestamp is, well, a timestamp that precedes both the stagtype (if enabled) and primary tag.  
-The time format for timestamps can be configured. See custom timestamp configuration in 5-10.md.  
+The time format for timestamps can be configured. See custom timestamp configuration in 5-9.md.  
 **Example:**  
 Call:
 ```python
@@ -84,3 +84,28 @@ cprint("ok", "Hello, world!", timestamp=True)
 ```
 Assuming default configurations and that the time is 12:34:56, this would be the output:  
 ![`[12:34:56][OK]: Hello, world!](images/e.png)
+
+## Valonly
+There's not much to say about this flag; enabling it (`valonly=True`) just makes `cprint` return its result in raw text instead of outputting it to the console.
+
+## Auto-Alignment
+This isn't a flag; this is a built-in feature of `cprint`.  
+In most configurations (including default!), tags will be different lengths. If there were no padding in text, it would look jittery and difficult to read.  
+Every tag (+stagtype and timestamp) has a gap (of spaces) between the actual tag and the text divisor (by default, that is the colon in `OK]:`, in between the tag and text). This is **padding**, and it exists to align the text of outputs with the rest of Cerbose's output.  
+If a tag is longer in characters than any tag before, the padding will increase in length to accommodate it, and all outputs afterward will have that new length of padding.  
+This would be true if not for Space Repeat Tolerance. Padding can get long over time, so whenever a length has repeated for a configurable amount of outputs (defaulted to 5), it will lower to the length of the next smaller tag, whether that be one character or 79.  
+To better understand this, here is an example (in raw codeblock, its fine):
+```python
+[OK]: This is a short tag. Padding will soon need to increase.
+[INFO]: This tag is longer than the previously outputted tag. Watch what happens when something shorter is outputted.
+[OK]  : The gap between the tag and text divisor (:) has increased to align the text!
+[DEBUG][FATAL]: This tag is very long.
+[WARN]        : This gap continues to accommodate the longest tag.
+[INFO]        : Watch what happens after this length has repeated five times.
+[OK]          : ...
+[OK]          : ...
+[OK]          : ...
+[WARN]: The padding (official name of gap) has now reset to the next shortest tag's length!
+```
+
+See Space Repeat Tolerance configuration in 5-9.md.
