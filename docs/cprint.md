@@ -33,7 +33,7 @@ Here is a table showing the default configurations of the tags in cprint:
 | `'trace'` | `TRACE` | `'magenta'` |
 | `'proc'` | `PROC` | `'magenta'` |
 
-## Example Usage
+## Basic Usage
 A cprint call, without any additional arguments, is formatted as:
 ```python
 cprint(tag, text)
