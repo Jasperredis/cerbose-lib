@@ -95,7 +95,7 @@ Every tag (+stagtype and timestamp) has a gap (of spaces) between the actual tag
 If a tag is longer in characters than any tag before, the padding will increase in length to accommodate it, and all outputs afterward will have that new length of padding.  
 This would be true if not for Space Repeat Tolerance. Padding can get long over time, so whenever a length has repeated for a configurable amount of outputs (defaulted to 5), it will lower to the length of the next smaller tag, whether that be one character or 79.  
 To better understand this, here is an example (in raw codeblock, its fine):
-```python
+```plaintext
 [OK]: This is a short tag. Padding will soon need to increase.
 [INFO]: This tag is longer than the previously outputted tag. Watch what happens when something shorter is outputted.
 [OK]  : The gap between the tag and text divisor (:) has increased to align the text!
