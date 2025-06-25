@@ -192,8 +192,25 @@ Here is a table showing the default configurations of the tags in cprint:
 | `'trace'` | `TRACE` | `'magenta'` |
 | `'proc'` | `PROC` | `'magenta'` |
 
+#### Basic Example
+A cprint call, without any additional arguments, is formatted as:
+```python
+cprint(tag, text)
+```
+Example:
+```python
+cprint("ok", "I like frogs."
+```
+Assuming default configurations, the output would look like this:
+![`[OK]: I like frogs.`](images/c.png)
+
 #### Logging
 Logging in `cprint` is simple.  
-Set the `logfile` argument to whatever file you want (e.g., `logfile="log.txt"`), and upon running the `cprint` function, that log file will be created if it doesn't already exist, and the message of the cprint call will be written to it. (assuming no errors occur). It will still print the output to the console unless you enable `valonly` (explained later).
+Set the `logfile` argument to whatever file you want (e.g., `logfile="log.txt"`), and upon running the `cprint` function, that log file will be created if it doesn't already exist, and the message of the cprint call will be written to it. (assuming no errors occur).  
+It will still print the output to the console unless you enable `valonly` (explained later). 
+
 You can also enable `logfeedback` (`logfeedback=True`) to have this output upon the log being written:  
 ![`[INFO]: Logged last message.`](images/b.png)
+> This output is unchanged regardless of configuration.
+
+### Text Colour
