@@ -110,3 +110,12 @@ To better understand this, here is an example (in raw codeblock, its fine):
 ```
 
 See Space Repeat Tolerance configuration in 5-9.md.
+
+# mprint
+`mprint` is functionally the exact same as cprint, except it supports multiline output. Here is a raw codeblock showcase of an output:
+```plaintext
+[NONE]: Hello.
+      : I like frogs.
+      : I hope you like them too. :)
+```
+It has the same arguments as `cprint`. Use `\n` to distinguish lines.
