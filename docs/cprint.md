@@ -10,7 +10,7 @@ This means that type and text are the first two required arguments, and the rest
 `type` defines the "tag" the output uses.  
 
 Here is an output of text from Cerbose (examples/test.py)  
-![Image didn't load. See https://github.com/Jasperredis/cerbose-lib/blob/main/docs/images/a.png](images/a.png)  
+![Image didn't load. See https://github.com/Jasperredis/cerbose-lib/blob/main/docs/images/a.png](assets/docs/a.png)  
 You should be able to see the parts in brackets. Those are tags.  
 Assuming you are using the default configuration, there are 14 of them. That number varies by your configuration, but you will always have at least 1 (if you don't want errors, that is).
 
@@ -44,7 +44,7 @@ cprint(tag, text)
 cprint("ok", "I like frogs."
 ```
 Assuming default configurations, the output would look like this:  
-![`[OK]: I like frogs.`](images/c.png)
+![`[OK]: I like frogs.`](assets/docs/c.png)
 
 > See custom tag configuration in 5-9.md.
 
@@ -54,7 +54,7 @@ It will still print the output to the console unless you enable `valonly` (expla
 If you do not want logging, do not enter the `logfile` argument. It will default to `None`, which will disable logging.
 
 You can also enable `logfeedback` (`logfeedback=True`) to have this output upon the log being written:  
-![`[INFO]: Logged last message.`](images/b.png)
+![`[INFO]: Logged last message.`](assets/docs/b.png)
 > This output is unchanged regardless of configuration.
 
 ## Text Colour
@@ -69,7 +69,7 @@ Call:
 cprint("ok", "Hello, world!", stagtype="warn")
 ```
 Assuming default configurations, this would be the output:  
-![`[WARN][OK]: Hello, world!](images/d.png)
+![`[WARN][OK]: Hello, world!](assets/docs/d.png)
 
 > This uses the same configuration as the primary tag.  
 See custom tag configuration in 5-9.md.
@@ -83,7 +83,7 @@ Call:
 cprint("ok", "Hello, world!", timestamp=True)
 ```
 Assuming default configurations and that the time is 12:34:56, this would be the output:  
-![`[12:34:56][OK]: Hello, world!](images/e.png)
+![`[12:34:56][OK]: Hello, world!](assets/docs/e.png)
 
 ## Valonly
 There's not much to say about this flag; enabling it (`valonly=True`) just makes `cprint` return its result in raw text instead of outputting it to the console.
