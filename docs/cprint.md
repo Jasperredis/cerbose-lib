@@ -3,7 +3,7 @@
 
 `cprint` is defined in Cerbose as:
 ```python
-cprint(type, text, *, logfile=None, logfeedback=False, textcol="normal", stagtype=None, timestamp=False, valonly=False):
+def cprint(type, text, *, logfile=None, logfeedback=False, textcol="normal", stagtype=None, timestamp=False, valonly=False):
 ```
 
 This means that type and text are the first two required arguments, and the rest are optional keyword arguments.
