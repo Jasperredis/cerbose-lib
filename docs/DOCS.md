@@ -169,15 +169,9 @@ cprint(type, text, *, logfile=None, logfeedback=False, textcol="normal", stagtyp
 This means that type and text are the first two required arguments, and the rest are optional keyword arugments.
 
 `type` defines the "tag" the output uses.  
-Here is an output of text from Cerbose (examples/test.py)
-```plaintext
-[OK]  : I like frogs.
-[NOTE]: I like frogs.
-[WARN]: I like frogs.
-[ERROR]: I like frogs.
-[DEBUG]: I like frogs.
-```
-Despite not being able to see the colours, you can see the parts in brackets. Those are tags.  
+Here is an output of text from Cerbose (examples/test.py)  
+![Image didn't load. See https://github.com/Jasperredis/cerbose-lib/blob/main/docs/images/a.png](images/a.png)  
+You should be able to see the parts in brackets. Those are tags.  
 Assuming you are using the default configuration, there are 14 of them. That number varies by your configuration, but you will always have at least 1 (if you don't want errors, that is).
 
 Here is a table showing the default configurations of the tags in cprint:
@@ -200,5 +194,6 @@ Here is a table showing the default configurations of the tags in cprint:
 
 #### Logging
 Logging in `cprint` is simple.  
-Set the `logfile` argument to whatever file you want (e.g., `logfile="log.txt"`), and upon running the `cprint` function, that log file will be created if it doesn't already exist, and written to (assuming no errors occur).  
-You can also 
+Set the `logfile` argument to whatever file you want (e.g., `logfile="log.txt"`), and upon running the `cprint` function, that log file will be created if it doesn't already exist, and the message of the cprint call will be written to it. (assuming no errors occur). It will still print the output to the console unless you enable `valonly` (explained later).
+You can also enable `logfeedback` (`logfeedback=True`) to have this output upon the log being written:  
+![`[INFO]: Logged last message.`](images/b.png)
