@@ -28,4 +28,10 @@ These are optional keyword arguments.
 `count` can have the same inputs with the same results, however instead of outputting a percentage, it just outputs `fill`/`total` (e.g., with 42/70, it just adds 42/70 before/after the bar).  
 If both are present on the same side, perc is always on the far left (whether that be farther from the bar in left or closer in right), and obviously the opposite for count.
 
+## REMEMBER
+cerbar does NOT output to the console. It RETURNS THE BAR IN A STRING. This is so that you can do:
+```python
+cprint("stat", f"YOU CAN PUT ANY TEXT BEFORE... {cerbose.cerbar(20, 70, 42)} OR AFTER THAT BAR! (also you can use cprint for tagging/logging)")
+```
+
 See configuration in 5-9.md.
