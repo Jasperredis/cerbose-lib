@@ -25,4 +25,18 @@ There are a lot of things you can observe from this.
 
 The prompt ("Hello,\nworld!") uses the exact same keyword arguments as `cprint`. The `type` and `text` inputs are the same, however the `options` tag is unique.  
 If you set `options` to a list (e.g., `['y', 'n', 'yes', 'no']`), the only answers allowed will be the items in that list and this output will appear if an option not in the list is given:  
-![`[ERROR]: cin: getCin: '(answer you inputted)' is not a valid option!`](assets/docs/f.png)
+![`[ERROR]: cin: getCin: '(answer you inputted)' is not a valid option!`](assets/docs/f.png)  
+Or, you can set the `options` input to `'any'` (string) and allow any input.  
+
+## Keyword Arguments
+Most keyword arguments in the `cin` function are the same as those in `cprint`/`mprint`, however there are two other arguments: `lower` and `showop`.  
+`lower` assumes all user input is in lowercase. Please do not make uppercase options. Please.  
+`showop` shows all availible options (it won't do anything if `options` is set to `'any'`) in the prompt. Here is an example in a codeblock:
+```plaintext
+[NONE]: Hello, world!
+      : 1) a
+      : 2) b
+      : 3) c
+      : 4) d
+> 
+```
