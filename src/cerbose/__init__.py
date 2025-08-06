@@ -331,7 +331,7 @@ def defconf(type, content):
     """
     if type == "f" or type == "file": # Handle files
         if not os.path.exists(os.path.expanduser(content)): # Check existence
-            INTERNAL_iprint("error", "defconf: File '{content}' does not exist.")
+            INTERNAL_iprint("error", f"defconf: File '{content}' does not exist.")
             return None
         try:
             with open(content, "r") as f: # Read
