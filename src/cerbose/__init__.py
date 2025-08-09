@@ -17,6 +17,8 @@
 # You should have received a copy of the GNU Lesser General Public License
 # along with this library. If not, see <https://www.gnu.org/licenses/>.
 
+# mwehehehehehe
+
 __version__ = "1.0"
 __author__ = "jasperredis <https://www.jris.straw.page>"
 __license__ = "GNU Lesser General Public License v3 or later"
