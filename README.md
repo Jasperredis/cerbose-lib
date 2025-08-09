@@ -18,6 +18,9 @@
 ![Test Preview Image](.readme/test.png)
 > This wasn't done in a codeblock because they can't display colours.
 
+- For contributing, see docs/contrib.md on the GitHub repo.
+- For the changelog, see docs/changelog.md on the GitHub repo.
+
 # Functions
 ## cprint
 This is the highlight function of Cerbose. It outputs highly configurable tagged text to the console, and you can configure the following:
